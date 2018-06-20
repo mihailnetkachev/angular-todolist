@@ -1,0 +1,17 @@
+.taskfield__searchfieldContainer {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 40rem;
+}
+
+.taskfield__searchfield {
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid #b5d1f1;
+  padding: 1rem;
+  width: 100%;
+}
+
+.taskfield__searchfield:focus {
+  border-color: #c1cc9c;
+}

@@ -1,0 +1,34 @@
+.taskfield__pageList {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-reset: pageList;
+}
+
+.taskfield__pageItem {
+  display: inline-block;
+  margin-left: .5rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: #b5d1f1;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+  cursor: pointer;
+  counter-increment: pageList 1;
+}
+
+.taskfield__pageItem:after {
+  content: counter(pageList);
+  display: inline;
+}
+
+.taskfield__pageItem:first-child {
+  margin-left: 0;
+}
+
+.taskfield__pageItem:hover {
+  background-color: #c1cc9c;
+}

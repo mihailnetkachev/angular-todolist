@@ -1,0 +1,28 @@
+.taskfield__sortfieldList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.taskfield__sortfieldItem {
+  display: inline-block;
+  margin-left: .5rem;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #b5d1f1;
+  color: white;
+  cursor: pointer;
+}
+
+.taskfield__sortfieldItem:first-child {
+  margin-left: 0;
+}
+
+.taskfield__sortfieldItem:hover {
+  background-color: #c1cc9c;
+}

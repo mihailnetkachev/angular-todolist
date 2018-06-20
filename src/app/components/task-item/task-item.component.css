@@ -1,0 +1,175 @@
+.taskfield__taskList {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 40rem;
+  list-style-type: none;
+}
+
+.taskfield__taskItem,
+.taskfield__itemTaskField,
+.taskfield__itemOptions{
+  display: flex;
+  align-items: center;
+}
+
+.taskfield__taskItem {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 5px dotted #244769;
+}
+
+.taskfield__taskItem:first-child {
+  border-top: none;
+}
+
+.taskfield__itemTaskField {
+  cursor: pointer;
+}
+
+.taskfield__itemCheckbox {
+  margin: 0;
+}
+
+.taskfield__itemCheckbox:checked + .taskfield__itemText {
+  text-decoration: line-through;
+  color: #c1cc9c;
+}
+
+.taskfield__itemText {
+  margin-left: .5rem;
+}
+
+.taskfield__itemDate,
+.taskfield__itemEditButton,
+.taskfield__itemDeleteButton {
+  margin-left: .5rem;
+}
+
+.taskfield__itemDate {
+  padding: 0 .5rem;
+}
+
+.taskfield__itemEditButton {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: #b5d1f1;
+  color: white;
+  cursor: pointer;
+}
+
+.taskfield__itemEditButton:after {
+  content: 'Edit';
+  display: inline;
+}
+
+.taskfield__itemEditButton:hover {
+  background-color: #c1cc9c;
+}
+
+.taskfield__itemDeleteButton {
+  display: inline-block;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: #244769;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+  cursor: pointer;
+  transform-origin: center;
+  transform: rotate(135deg);
+}
+
+.taskfield__itemDeleteButton:after {
+  content: '+';
+  display: inline;
+}
+
+.taskfield__itemDeleteButton:hover {
+  background-color: #c1cc9c;
+}
+
+.taskfield__tooltip {
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform-origin: center;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  padding: .5rem 1rem;
+  background-color: #b5d1f1;
+  color: white;
+}
+
+.taskfield__tooltip:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: .5rem;
+  height: .5rem;
+  background-color: inherit;
+}
+
+.taskfield__tooltipInputField {
+  outline: none;
+  border-color: #244769;
+  border-style: solid;
+  padding: 0 .5rem;
+  width: 12rem;
+}
+
+.taskfield__tooltipChangeButton {
+  display: inline-block;
+  padding: 0 .5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: #244769;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+
+.taskfield__tooltipChangeButton:hover {
+  background-color: #c1cc9c;
+}
+
+.taskfield__tooltipCloseButton {
+  display: inline-block;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: #244769;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+  font-size: .5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: center;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.taskfield__tooltipCloseButton:after {
+  content: '+';
+  display: inline;
+}
+
+.taskfield__tooltipCloseButton:hover {
+  background-color: #c1cc9c;
+}

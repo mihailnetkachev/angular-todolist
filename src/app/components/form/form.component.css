@@ -1,0 +1,44 @@
+.inputfield__form {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 2rem;
+}
+
+.inputfield__formLabel,
+.inputfield__formTitle,
+.inputfield__formInput,
+.inputfield__formButton {
+  display: block;
+}
+
+.inputfield__formTitle {
+  color: #244769;
+}
+
+.inputfield__formInput,
+.inputfield__formButton {
+  box-sizing: border-box;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+  font-family: Verdana, sans-serif;
+}
+
+.inputfield__formInput {
+  margin-top: 1rem;
+  border-color: #244769;
+  border-style: solid;
+}
+
+.inputfield__formButton {
+  border: none;
+  background-color: #244769;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.inputfield__formButton:hover {
+  background-color: #c1cc9c;
+  cursor: pointer;
+}

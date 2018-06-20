@@ -1,0 +1,7 @@
+<form class="inputfield__form">
+  <label class="inputfield__formLabel">
+    <span class="inputfield__formTitle">I wanna remember that I should ...</span>
+    <input type="text" class="inputfield__formInput" placeholder="... walk with my dog." #input>
+  </label>
+  <input type="button" class="inputfield__formButton" value="Create new task" (click)="getTextOfTask(input.value)">
+</form>
