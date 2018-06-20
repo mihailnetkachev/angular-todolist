@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './components/form/form.component';
+import { FormfieldComponent } from './components/formfield/formfield.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { SearchfieldComponent } from './components/searchfield/searchfield.component';
@@ -13,7 +13,7 @@ import { PaginationfieldComponent } from './components/paginationfield/paginatio
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
+    FormfieldComponent,
     TodoListComponent,
     TaskItemComponent,
     SearchfieldComponent,

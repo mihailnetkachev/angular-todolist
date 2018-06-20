@@ -1,15 +1,20 @@
 <div class="inputfield">
+  <!-- formfield -->
   <app-form (taskText)="noteTask($event)"></app-form>
 </div>
 <div class="taskfield">
+  <!-- sortfield -->
   <app-sortfield (sortType)="setSortType($event)"></app-sortfield>
+  <!-- searchfiled -->
   <app-searchfield (soughtText)="setSearchType($event)"></app-searchfield>
+  <!-- listfield -->
   <app-task-item
     [tasks]="this.tasksToRender | async"
     (completingItemId)="triggeringTaskCompleting($event)"
     (editingItemOptions)="editTask($event)"
     (removingItemId)="removeTask($event)"></app-task-item>
-  <app-paginationfield [numberOfTasks]="16"
+  <!-- paginationfield -->
+  <app-paginationfield [numberOfPage]="this.numberOfPage"
                        [maxValueOfRender]="this.renderValue"
                        (renderIndex)="setRenderPosition($event)"></app-paginationfield>
 </div>

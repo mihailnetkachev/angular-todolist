@@ -2,10 +2,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  templateUrl: './formfield.component.html',
+  styleUrls: ['./formfield.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormfieldComponent implements OnInit {
 
   @Output() taskText = new EventEmitter<string>();
 

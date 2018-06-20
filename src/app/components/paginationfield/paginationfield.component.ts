@@ -11,7 +11,7 @@ export class PaginationfieldComponent implements OnInit {
 
   public pageList: Page[];
 
-  @Input() numberOfTasks: number;
+  @Input() numberOfPage: number;
   @Input() maxValueOfRender: number;
   @Output() renderIndex = new EventEmitter<number>();
 
@@ -26,9 +26,8 @@ export class PaginationfieldComponent implements OnInit {
 
   createPageList(): Page[] {
     let currentIndex = 0;
-    const numberOfPage = Math.ceil(this.numberOfTasks / this.maxValueOfRender);
     const pageList: Page[] = [];
-    for (let i = 0; i < numberOfPage; i++) {
+    for (let i = 0; i < this.numberOfPage; i++) {
       pageList.push(new Page(currentIndex));
       currentIndex += this.maxValueOfRender;
     }
