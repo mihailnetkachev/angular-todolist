@@ -3,3 +3,4 @@ export function compareStrings(firstString: string, secondString): boolean {
   const secondStringLowerCase = secondString.toLowerCase();
   return secondStringLowerCase.includes(firstStringLowerCase);
 }
+

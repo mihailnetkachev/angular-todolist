@@ -1,11 +1,3 @@
-.taskfield__taskList {
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 40rem;
-  min-height: 13rem;
-  list-style-type: none;
-}
-
 .taskfield__taskItem,
 .taskfield__itemTaskField,
 .taskfield__itemOptions{

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { LocalStorageService } from '../../services/local-storage/local-storage.service';
-import { Task } from '../../interfaces/task';
-import { EditedTask } from '../../interfaces/editedTask';
-import { compareStrings } from '../../helpers/helpers';
+import { LocalStorageService } from '../../../services/local-storage/local-storage.service';
+import { Task } from '../../../interfaces/task';
+import { EditedTask } from '../../../interfaces/editedTask';
+import { compareStrings } from '../../../helpers/helpers';
 
 @Component({
   selector: 'app-todo-list',

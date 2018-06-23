@@ -8,11 +8,14 @@
   <!-- searchfiled -->
   <app-searchfield (soughtText)="setSearchType($event)"></app-searchfield>
   <!-- listfield -->
-  <app-task-item
-    [tasks]="this.tasksToRender | async"
-    (completingItemId)="triggeringTaskCompleting($event)"
-    (editingItemOptions)="editTask($event)"
-    (removingItemId)="removeTask($event)"></app-task-item>
+  <ul class="taskfield__taskList">
+    <app-task-item
+      *ngFor="let task of (this.tasksToRender | async)"
+      [task]="task"
+      (completingItemId)="triggeringTaskCompleting($event)"
+      (editingItemOptions)="editTask($event)"
+      (removingItemId)="removeTask($event)"></app-task-item>
+  </ul>
   <!-- paginationfield -->
   <app-paginationfield [numberOfPage]="this.numberOfPage"
                        [maxValueOfRender]="this.renderValue"

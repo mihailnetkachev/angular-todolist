@@ -1,29 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { RoutingModule } from './routing.module';
 
 import { AppComponent } from './app.component';
-import { FormfieldComponent } from './components/formfield/formfield.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TaskItemComponent } from './components/task-item/task-item.component';
-import { SearchfieldComponent } from './components/searchfield/searchfield.component';
-import { SortfieldComponent } from './components/sortfield/sortfield.component';
-import { PaginationfieldComponent } from './components/paginationfield/paginationfield.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormfieldComponent,
-    TodoListComponent,
-    TaskItemComponent,
-    SearchfieldComponent,
-    SortfieldComponent,
-    PaginationfieldComponent
-  ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
+    RoutingModule,
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

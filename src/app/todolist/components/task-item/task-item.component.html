@@ -1,0 +1,18 @@
+<li class="taskfield__taskItem" [id]="task.creatingDate" #taskItem>
+  <label class="taskfield__itemTaskField">
+    <input type="checkbox" class="taskfield__itemCheckbox" (click)="completeTask(+taskItem.id)">
+    <span class="taskfield__itemText" #taskText>{{task.text}}</span>
+  </label>
+  <div class="taskfield__itemOptions">
+    <span class="taskfield__itemDate">{{createDateString(task.creatingDate)}}</span>
+    <a class="taskfield__itemEditButton" (click)="triggerTooltipeShowing()"></a>
+    <a class="taskfield__itemDeleteButton" (click)="removeTask(+taskItem.id)"></a>
+  </div>
+  <div class="taskfield__tooltip" *ngIf="tooltipeShowingStatus">
+    <input type="text" class="taskfield__tooltipInputField" placeholder="I have changed my mind ..."
+           [value]="task.text" #tooltipeInput>
+    <input type="submit" class="taskfield__tooltipChangeButton" value="Edit"
+           (click)="editTask(+taskItem.id, tooltipeInput.value)">
+    <a class="taskfield__tooltipCloseButton" (click)="triggerTooltipeShowing()"></a>
+  </div>
+</li>

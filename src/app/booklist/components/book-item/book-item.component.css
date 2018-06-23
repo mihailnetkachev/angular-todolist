@@ -1,0 +1,17 @@
+.books__item {
+  padding: 1rem 1.5rem;
+}
+
+.books__itemTitle {
+  font-size: 1.5em;
+}
+
+.books__itemName {
+  font-weight: bold;
+}
+
+.books__itemAuthor:before {
+  content: '|';
+  display: inline;
+  margin: 0 .5rem
+}

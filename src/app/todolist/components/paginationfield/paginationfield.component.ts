@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Page } from '../../interfaces/page';
+import { Page } from '../../../interfaces/page';
 import {BehaviorSubject} from 'rxjs';
 
 @Component({

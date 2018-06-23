@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { EditedTask } from '../../interfaces/editedTask';
+import { EditedTask } from '../../../interfaces/editedTask';
 
 @Component({
   selector: 'app-task-item',
@@ -8,12 +8,12 @@ import { EditedTask } from '../../interfaces/editedTask';
 })
 export class TaskItemComponent implements OnInit {
 
-  @Input() tasks;
+  @Input() task;
   @Output() completingItemId = new EventEmitter<number>();
   @Output() editingItemOptions = new EventEmitter<EditedTask>();
   @Output() removingItemId = new EventEmitter<number>();
 
-  public tooltipeShowingStatus = -1;
+  public tooltipeShowingStatus = false;
 
   constructor() {}
 
@@ -31,11 +31,15 @@ export class TaskItemComponent implements OnInit {
 
   editTask(id: number, text: string): void {
     this.editingItemOptions.emit(new EditedTask(id, text));
-    this.tooltipeShowingStatus = -1;
+    this.tooltipeShowingStatus = false;
   }
 
   removeTask(id: number): void {
     this.removingItemId.emit(id);
+  }
+
+  triggerTooltipeShowing(): void {
+    this.tooltipeShowingStatus = !this.tooltipeShowingStatus;
   }
 
 }

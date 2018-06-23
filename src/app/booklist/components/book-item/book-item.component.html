@@ -1,0 +1,14 @@
+<li class="books__item">
+  <div class="books__itemTitle">
+    <span class="books__itemName">{{bookData.name}}</span>
+    <span class="books__itemAuthor">{{bookData.authors}}</span>
+  </div>
+  <div class="books__itemInfo">
+    Released: <span class="books__itemDate">{{transformDate(bookData.released)}}</span> -
+    <span class="books__itemPublisher">{{bookData.publisher}}</span>,
+    pages: <span class="books__itemPages">{{bookData.numberOfPages}}</span>
+  </div>
+  <div class="books__itemNavigation">
+    <a [href]="bookData.url" class="books__itemLink">Read ...</a>
+  </div>
+</li>
